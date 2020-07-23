@@ -3,6 +3,7 @@
     "displayName": "Hamler",
     "description": "Hamler syntax extension for VSCode",
     "version": "0.0.1",
+    "publisher": "emqx",
     "engines": {
         "vscode": "^1.47.0"
     },
