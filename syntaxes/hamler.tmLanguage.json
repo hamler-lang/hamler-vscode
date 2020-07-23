@@ -1,0 +1,66 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Hamler",
+	"patterns": [
+		{ "include": "#keywords" },
+		{ "include": "#strings" },
+		{ "include": "#comments.line" },
+		{ "include": "#comments.block" },
+		{ "include": "#constants" },
+		{ "include": "#types" },
+		{ "include": "#values" }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.hamler",
+				"match": "\\b(let|in|forall|where|module|import|infixr|infixl|hiding|as|data|type|newtype|class|instance|if|then|else|foreign)\\b"
+			}, {
+				"name": "keyword.operator.hamler",
+				"match": "\\b(->|::|=|:=|_|:|<-)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.hamler",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [{
+				"name": "constant.character.escape.hamler",
+				"match": "\\\\."
+			}]
+		}, 
+		"comments.line": {
+			"patterns": [{
+				"name": "comment.line.double-dash.hamler",
+				"match": "--.*\n"
+			}]
+		},
+		"comments.block": {
+			"name": "comment.block.hamler",
+			"begin": "{-",
+			"end": "-}"
+		},
+		"constants": {
+			"patterns": [{
+				"name": "constant.numeric.hamler",
+				"match": "\\b[0-9]+\\b"
+			}, {
+				"name": "constant.language.hamler",
+				"match": "\\b:[a-z|A-Z|0-9|_']*\\b"
+			}]
+		},
+		"types": {
+			"patterns": [{
+				"name": "storage.type.hamler",
+				"match": "\\b[A-Z][a-z|A-Z|0-9|_']*\\b"
+			}]
+		},
+		"values": {
+			"patterns": [{
+				"name": "variable.parameter.hamler",
+				"match": "\\b[a-z][a-z|A-Z|0-9|_']*\\b"
+			}]
+		}
+	},
+	"scopeName": "source.hamler"
+}
