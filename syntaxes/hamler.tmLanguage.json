@@ -14,7 +14,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.hamler",
-				"match": "\\b(do|let|in|forall|where|module|import|infixr|infixl|hiding|as|data|type|newtype|class|instance|if|then|else|foreign)\\b"
+				"match": "\\b(after|receive|case|of|do|let|in|forall|where|module|import|infixr|infixl|hiding|as|data|type|newtype|class|instance|if|then|else|foreign)\\b"
 			}, {
 				"name": "keyword.operator.hamler",
 				"match": "\\b(->|::|=|:=|_|:|<-)\\b"
